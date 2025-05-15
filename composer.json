@@ -1,5 +1,5 @@
 {
-    "name": "swoft-ext/cloud-storage",
+    "name": "swoft-component/cloud-storage",
     "type": "library",
     "version": "v2.0.1",
     "keywords": [
