@@ -1,11 +1,12 @@
 {
-    "name": "swoft/cloud-storage",
+    "name": "swoft-ext/cloud-storage",
     "type": "library",
     "version": "v2.0.1",
     "keywords": [
         "php",
         "swoole",
         "swoft",
+        "swoft-ext",
         "cloud-storage",
         "qiniu"
     ],
