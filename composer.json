@@ -10,7 +10,7 @@
         "cloud-storage",
         "qiniu"
     ],
-    "description": "cloud storage component for swoft",
+    "description": "cloud storage component for swoft, now support qiniu cloud storage",
     "homepage": "https://github.com/liujiekkk/swoft-cloud-storage",
     "license": "Apache-2.0",
     "require": {
