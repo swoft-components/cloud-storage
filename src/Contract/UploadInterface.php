@@ -26,17 +26,17 @@ interface UploadInterface
      *
      * @param string $cloudFileName 云文件名称
      * @param string $localFilePath 本地文件路径
-     * @return array                上传文件信息
+     * @return ResponseInterface 上传文件信息
      */
-    public function upload(string $cloudFileName, string $localFilePath): array;
+    public function upload(string $cloudFileName, string $localFilePath): ResponseInterface;
 
     /**
      * 上传二进制数据
      *
      * @param string $blob 二进制数据
      * @param string|null $cloudFileName 云文件名称
-     * @return array 上传文件信息
+     * @return ResponseInterface 上传文件信息
      */
-    public function uploadBlob(string $blob, ?string $cloudFileName = null): array;
+    public function uploadBlob(string $blob, ?string $cloudFileName = null): ResponseInterface;
 
 }

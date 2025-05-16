@@ -14,6 +14,7 @@
 namespace SwoftTest\CloudStorage\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Swoft\CloudStorage\Contract\ResponseInterface;
 use Swoft\CloudStorage\Exception\QiniuException;
 use Swoft\CloudStorage\Storage\Qiniu;
 
@@ -32,11 +33,13 @@ class QiniuTest extends TestCase
         $localFilePath = __DIR__. DIRECTORY_SEPARATOR. 'test.jpg';
 
         /** @var Qiniu $qiniu */
-        $qiniu = bean('qiniu');
+        $qiniu = bean(Qiniu::class);
         $this->assertInstanceOf(Qiniu::class, $qiniu);
-        $result = $qiniu->upload($cloudFileName, $localFilePath);
-        $this->assertNotNull($result[0]);
-        $this->assertNull($result[1]);
+
+        $response = $qiniu->upload($cloudFileName, $localFilePath);
+        $this->assertInstanceOf(ResponseInterface::class, $response);
+        $this->assertIsInt($response->getErrorCode());
+        $this->assertEquals(0, $response->getErrorCode());
     }
 
     /**
@@ -52,11 +55,13 @@ class QiniuTest extends TestCase
         $content = file_get_contents($localFilePath);
         $this->assertNotEmpty($content);
         /** @var Qiniu $qiniu */
-        $qiniu = bean('qiniu');
+        $qiniu = bean(Qiniu::class);
         $this->assertInstanceOf(Qiniu::class, $qiniu);
-        $result = $qiniu->uploadBlob($content, $cloudFileName);
-        $this->assertNotNull($result[0]);
-        $this->assertNull($result[1]);
+
+        $response = $qiniu->uploadBlob($content, $cloudFileName);
+        $this->assertInstanceOf(ResponseInterface::class, $response);
+        $this->assertIsInt($response->getErrorCode());
+        $this->assertEquals(0, $response->getErrorCode());
     }
 
 }
