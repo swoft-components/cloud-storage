@@ -6,12 +6,12 @@
         "php",
         "swoole",
         "swoft",
-        "swoft-ext",
+        "swoft-components",
         "cloud-storage",
         "qiniu"
     ],
     "description": "cloud storage component for swoft, now support qiniu cloud storage",
-    "homepage": "https://github.com/liujiekkk/swoft-cloud-storage",
+    "homepage": "https://github.com/swoft-components/cloud-storage",
     "license": "Apache-2.0",
     "require": {
         "php": ">=7.4",
