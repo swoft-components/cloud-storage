@@ -13,6 +13,7 @@
 
 namespace Swoft\CloudStorage;
 
+use Swoft\CloudStorage\Contract\ResponseInterface;
 use Swoft\CloudStorage\Contract\UploadInterface;
 use Swoft\CloudStorage\Exception\CloudStorageException;
 
@@ -27,8 +28,11 @@ final class CloudStorage
     /**
      * @throws CloudStorageException
      */
-    public static function upload(string $cloudFileName, string $localFilePath, string $cloudStorageType = CloudStorageType::QINIU): array
+    public static function upload(string $cloudFileName, string $localFilePath, string $cloudStorageType = CloudStorageType::QINIU): ResponseInterface
     {
+        if (!in_array($cloudStorageType, CloudStorageType::TYPES)) {
+            throw new CloudStorageException('Invalid param $cloudStorageType');
+        }
         $obs  = bean($cloudStorageType);
         if ($obs === null) {
             throw new CloudStorageException('CloudStorageType is not found');

@@ -29,4 +29,8 @@ class CloudStorageType
 
     const TENCENT = 'tencent';
 
+    const TYPES = [
+        self::QINIU,
+    ];
+
 }

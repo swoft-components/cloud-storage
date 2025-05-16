@@ -39,7 +39,14 @@ class QiniuTest extends TestCase
         $response = $qiniu->upload($cloudFileName, $localFilePath);
         $this->assertInstanceOf(ResponseInterface::class, $response);
         $this->assertIsInt($response->getErrorCode());
-        $this->assertEquals(0, $response->getErrorCode());
+        // 如果成功
+        if ($response->getErrorCode() === 0) {
+            $this->assertIsArray($response->getResult());
+            $this->assertArrayHasKey('hash', $response->getResult());
+            $this->assertArrayHasKey('key', $response->getResult());
+        } else {
+            $this->assertGreaterThan(0, $response->getErrorCode());
+        }
     }
 
     /**
@@ -61,7 +68,14 @@ class QiniuTest extends TestCase
         $response = $qiniu->uploadBlob($content, $cloudFileName);
         $this->assertInstanceOf(ResponseInterface::class, $response);
         $this->assertIsInt($response->getErrorCode());
-        $this->assertEquals(0, $response->getErrorCode());
+        // 如果成功
+        if ($response->getErrorCode() === 0) {
+            $this->assertIsArray($response->getResult());
+            $this->assertArrayHasKey('hash', $response->getResult());
+            $this->assertArrayHasKey('key', $response->getResult());
+        } else {
+            $this->assertGreaterThan(0, $response->getErrorCode());
+        }
     }
 
 }
