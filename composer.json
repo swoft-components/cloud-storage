@@ -1,7 +1,7 @@
 {
     "name": "swoft-components/cloud-storage",
     "type": "library",
-    "version": "v3.0.0",
+    "version": "v3.0.0-beta",
     "minimum-stability": "stable",
     "keywords": [
         "php",
