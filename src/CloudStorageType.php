@@ -11,9 +11,9 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage;
+namespace SwoftComponents\CloudStorage;
 
-use Swoft\CloudStorage\Storage\Qiniu;
+use SwoftComponents\CloudStorage\Storage\Qiniu;
 
 /**
  * Class CloudStorageType

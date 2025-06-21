@@ -11,12 +11,12 @@
  * @contact king.2oo8@163.com
  */
 
-namespace SwoftTest\CloudStorage\Unit;
+namespace SwoftComponentsTest\CloudStorage\Unit;
 
 use PHPUnit\Framework\TestCase;
-use Swoft\CloudStorage\Contract\ResponseInterface;
-use Swoft\CloudStorage\Exception\QiniuException;
-use Swoft\CloudStorage\Storage\Qiniu;
+use SwoftComponents\CloudStorage\Exception\QiniuException;
+use SwoftComponents\CloudStorage\Storage\Qiniu;
+use SwoftComponents\Stdlib\Contract\ResponseInterface;
 
 class QiniuTest extends TestCase
 {
@@ -44,6 +44,7 @@ class QiniuTest extends TestCase
             $this->assertIsArray($response->getResult());
             $this->assertArrayHasKey('hash', $response->getResult());
             $this->assertArrayHasKey('key', $response->getResult());
+            var_dump($response->getResult());
         } else {
             $this->assertGreaterThan(0, $response->getErrorCode());
         }

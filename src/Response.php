@@ -11,11 +11,11 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage;
+namespace SwoftComponents\CloudStorage;
 
 use Swoft\Bean\Annotation\Mapping\Bean;
 use Swoft\Bean\Concern\PrototypeTrait;
-use Swoft\CloudStorage\Contract\ResponseInterface;
+use SwoftComponents\Stdlib\Contract\ResponseInterface;
 
 /**
  * Class Response

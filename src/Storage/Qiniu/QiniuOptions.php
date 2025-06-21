@@ -11,7 +11,7 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage\Storage\Qiniu;
+namespace SwoftComponents\CloudStorage\Storage\Qiniu;
 
 use Qiniu\Http\RequestOptions;
 use Swoft\Bean\Annotation\Mapping\Bean;

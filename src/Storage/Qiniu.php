@@ -11,21 +11,21 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage\Storage;
+namespace SwoftComponents\CloudStorage\Storage;
 
 use Exception;
 use Qiniu\Auth;
 use Qiniu\Storage\UploadManager;
 use Swoft\Bean\Container;
-use Swoft\CloudStorage\Contract\FilterInterface;
-use Swoft\CloudStorage\Contract\RequestInterface;
-use Swoft\CloudStorage\Contract\ResponseInterface;
-use Swoft\CloudStorage\Contract\UploadInterface;
-use Swoft\CloudStorage\Exception\QiniuException;
-use Swoft\CloudStorage\Filter\QiniuFilter;
-use Swoft\CloudStorage\Request;
-use Swoft\CloudStorage\Response;
-use Swoft\CloudStorage\Storage\Qiniu\QiniuOptions;
+use SwoftComponents\CloudStorage\Contract\FilterInterface;
+use SwoftComponents\CloudStorage\Contract\UploadInterface;
+use SwoftComponents\CloudStorage\Exception\QiniuException;
+use SwoftComponents\CloudStorage\Filter\QiniuFilter;
+use SwoftComponents\CloudStorage\Request;
+use SwoftComponents\CloudStorage\Response;
+use SwoftComponents\CloudStorage\Storage\Qiniu\QiniuOptions;
+use SwoftComponents\Stdlib\Contract\ResponseInterface;
+use SwoftComponents\Stdlib\Contract\RequestInterface;
 
 /**
  * Class Qiniu
@@ -142,9 +142,9 @@ final class Qiniu implements UploadInterface
     /**
      * 上传二进制数据
      *
-     * @param string $blob                  二进制数据
-     * @param string|null $cloudFileName    云文件名称（可为空）
-     * @return array
+     * @param string $blob 二进制数据
+     * @param string|null $cloudFileName 云文件名称（可为空）
+     * @return ResponseInterface
      * @throws QiniuException
      */
     public function uploadBlob(string $blob, string $cloudFileName = null): ResponseInterface

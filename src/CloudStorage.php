@@ -11,11 +11,11 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage;
+namespace SwoftComponents\CloudStorage;
 
-use Swoft\CloudStorage\Contract\ResponseInterface;
-use Swoft\CloudStorage\Contract\UploadInterface;
-use Swoft\CloudStorage\Exception\CloudStorageException;
+use SwoftComponents\CloudStorage\Contract\UploadInterface;
+use SwoftComponents\CloudStorage\Exception\CloudStorageException;
+use SwoftComponents\Stdlib\Contract\ResponseInterface;
 
 /**
  * Class CloudStorage

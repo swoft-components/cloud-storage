@@ -1,7 +1,8 @@
 {
     "name": "swoft-components/cloud-storage",
     "type": "library",
-    "version": "v2.0.2",
+    "version": "v3.0.0",
+    "minimum-stability": "stable",
     "keywords": [
         "php",
         "swoole",
@@ -16,11 +17,13 @@
     "require": {
         "php": ">=7.4",
         "qiniu/php-sdk": "^7.14",
-        "swoft/framework": "~2.0.0"
+        "swoft/framework": "~2.0.0",
+        "swoft-components/stdlib": "^1.0.0",
+        "ext-curl": "*"
     },
     "autoload": {
         "psr-4": {
-            "Swoft\\CloudStorage\\": "src/"
+            "SwoftComponents\\CloudStorage\\": "src/"
         }
     },
     "require-dev": {
@@ -31,9 +34,11 @@
         "psr-4": {
             "SwoftTest\\Unit\\": "vendor/swoft/framework/test/unit/",
             "SwoftTest\\Testing\\": "vendor/swoft/framework/test/testing/",
-            "SwoftTest\\CloudStorage\\Unit\\": "test/unit",
-            "SwoftTest\\CloudStorage\\Testing\\": "test/testing"
+            "SwoftComponentsTest\\CloudStorage\\Unit\\": "test/unit",
+            "SwoftComponentsTest\\CloudStorage\\Testing\\": "test/testing"
         }
+    },
+    "repositories": {
     },
     "scripts": {
         "test": "php run.php -c phpunit.xml"

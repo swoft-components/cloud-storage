@@ -11,7 +11,7 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage;
+namespace SwoftComponents\CloudStorage;
 
 /**
  * Class CloudStorageEvent

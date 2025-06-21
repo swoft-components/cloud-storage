@@ -11,7 +11,9 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage\Contract;
+namespace SwoftComponents\CloudStorage\Contract;
+
+use SwoftComponents\Stdlib\Contract\ResponseInterface;
 
 /**
  * 上传接口

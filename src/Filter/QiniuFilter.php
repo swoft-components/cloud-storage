@@ -11,14 +11,14 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage\Filter;
+namespace SwoftComponents\CloudStorage\Filter;
 
 use Closure;
 use Qiniu\Http\Error;
 use Swoft\Bean\Annotation\Mapping\Bean;
-use Swoft\CloudStorage\Contract\FilterInterface;
-use Swoft\CloudStorage\Contract\RequestInterface;
-use Swoft\CloudStorage\Contract\ResponseInterface;
+use SwoftComponents\CloudStorage\Contract\FilterInterface;
+use SwoftComponents\Stdlib\Contract\RequestInterface;
+use SwoftComponents\Stdlib\Contract\ResponseInterface;
 
 /**
  * Class QiniuFilter

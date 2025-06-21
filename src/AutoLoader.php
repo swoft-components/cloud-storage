@@ -8,11 +8,11 @@
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
 
-namespace Swoft\CloudStorage;
+namespace SwoftComponents\CloudStorage;
 
 use Qiniu\Auth;
 use Qiniu\Storage\UploadManager;
-use Swoft\CloudStorage\Storage\Qiniu;
+use SwoftComponents\CloudStorage\Storage\Qiniu;
 use Swoft\Helper\ComposerJSON;
 use Swoft\SwoftComponent;
 

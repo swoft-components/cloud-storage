@@ -11,9 +11,11 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage\Contract;
+namespace SwoftComponents\CloudStorage\Contract;
 
 use Closure;
+use SwoftComponents\Stdlib\Contract\RequestInterface;
+use SwoftComponents\Stdlib\Contract\ResponseInterface;
 
 /**
  * Interface FilterInterface

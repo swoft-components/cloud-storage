@@ -8,7 +8,7 @@
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
 
-namespace SwoftTest\CloudStorage\Testing;
+namespace SwoftComponentsTest\CloudStorage\Testing;
 
 use Swoft\SwoftComponent;
 

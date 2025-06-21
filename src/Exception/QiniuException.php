@@ -12,7 +12,7 @@
  * @contact king.2oo8@163.com
  */
 
-namespace Swoft\CloudStorage\Exception;
+namespace SwoftComponents\CloudStorage\Exception;
 
 /**
  * Class QiniuException
